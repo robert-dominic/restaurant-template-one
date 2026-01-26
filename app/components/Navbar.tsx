@@ -61,14 +61,6 @@ export default function Navbar() {
           </NavLink>
         </ul>
 
-        {/* Desktop CTA */}
-        <div className="bg-primary text-white gap-2 hidden md:flex items-center px-4 py-3 btn-custom-rounded hover:bg-primary/90 cursor-pointer">
-          <img src={Telephone.src} alt="Phone Icon" className="w-5 h-5" />
-          <button className="text-sm uppercase">
-            Contact Us
-          </button>
-        </div>
-
         {/* Mobile Hamburger */}
         <button
           className={`md:hidden cursor-pointer ${mobileMenuOpen ? "hidden" : "block"}`}
@@ -123,12 +115,6 @@ export default function Navbar() {
           >
             Testimonials
           </NavLink>
-          <div className="bg-primary text-white flex items-center gap-2 px-4 py-3 btn-custom-rounded hover:bg-primary/90 cursor-pointer">
-            <img src={Telephone.src} alt="Phone Icon" className="w-4 h-4" />
-            <button className="text-white text-[0.8rem] uppercase cursor-pointer">
-              Contact Us
-            </button>
-          </div>
         </ul>
       </div>
 
