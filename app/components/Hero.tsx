@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-15 lg:grid-cols-2 gap-24 items-center">
         
         {/* Left Side - Content */}
-        <div className="space-y-6 mx-auto">
+        <div className="space-y-6 mx-auto order-2 md:order-1 md:text-left">
           <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-tight">
             We provide the best food for you
           </h1>
@@ -42,7 +42,7 @@ export default function Hero() {
         </div>
         
         {/* Right Side - Image */}
-        <div className="flex justify-center items-center mb-3 p-10 relative leaf-decoration">
+        <div className="flex justify-center items-center mb-3 md:p-0 p-10 relative leaf-decoration order-1 md:order-2">
           <div className="ml-10 rounded-3xl overflow-hidden z-10">
             <img 
               src={HeroImage.src}
