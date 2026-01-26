@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { X, Menu } from "lucide-react"
 import { useEffect, useState } from "react"
 import NavLink from "@/app/components/NavLinks"
@@ -8,12 +9,13 @@ import Logo from "@/public/logo.svg"
 import Telephone from "@/public/telephone.svg"
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [activeSection, setActiveSection] = useState("")
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["hero", "menu", "about", "services"]
+      const sections = ["hero", "about", "gallery", "testimonials"]
       const current = sections.find(section => {
         const element = document.getElementById(section)
         if (element) {
@@ -36,33 +38,33 @@ export default function Navbar() {
   }
 
   return (
-    <header className="w-full bg-white fixed top-0 z-45">
+    <header className="w-full bg-white fixed top-0 z-50">
       <nav className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
         {/* Logo */}
         <Link href="/#hero">
           <div className="flex items-center gap-1 cursor-pointer">
             <img src={Logo.src} alt="Logo" className="w-[45px] h-auto" />
-            <span className="font-bold mt-2 text-gray-700 text-xl uppercase">The Cozy Table</span>
+            <span className="font-bold mt-2 text-gray-700 text-[1.15rem] lg:text-xl uppercase">The Cozy Table</span>
           </div>
         </Link>
 
         {/* Desktop Menu */}
         <ul className="font-medium mt-2 hidden md:flex items-center gap-1.5">
-          <NavLink href="#menu" isActive={activeSection === "menu"}>
-            Menu
+          <NavLink href="#gallery" isActive={activeSection === "gallery"}>
+            Gallery
           </NavLink>
           <NavLink href="#about" isActive={activeSection === "about"}>
             About us
           </NavLink>
-          <NavLink href="#services" isActive={activeSection === "services"}>
-            Services
+          <NavLink href="/menu" isActive={pathname === "/menu"}>
+            menu
           </NavLink>
         </ul>
 
         {/* Desktop CTA */}
-        <div className="bg-primary text-white gap-1.5 hidden md:flex items-center px-4 rounded-md hover:bg-primary/90 cursor-pointer">
+        <div className="bg-primary text-white gap-2 hidden md:flex items-center px-4 py-3 btn-custom-rounded hover:bg-primary/90 cursor-pointer">
           <img src={Telephone.src} alt="Phone Icon" className="w-5 h-5" />
-          <button className="py-2 text-sm uppercase">
+          <button className="text-sm uppercase">
             Contact Us
           </button>
         </div>
@@ -94,11 +96,18 @@ export default function Navbar() {
 
         <ul className="flex flex-col font-bold gap-6 p-8 pt-20">
           <NavLink
-            href="#menu"
-            isActive={activeSection === "menu"}
+            href="/menu"
+            isActive={pathname === "/menu"}
             onClick={handleLinkClick}
           >
             Menu
+          </NavLink>
+          <NavLink
+            href="#gallery"
+            isActive={activeSection === "gallery"}
+            onClick={handleLinkClick}
+          >
+            Gallery
           </NavLink>
           <NavLink
             href="#about"
@@ -108,15 +117,15 @@ export default function Navbar() {
             About us
           </NavLink>
           <NavLink
-            href="#services"
-            isActive={activeSection === "services"}
+            href="#testimonials"
+            isActive={activeSection === "testimonials"}
             onClick={handleLinkClick}
           >
-            Services
+            Testimonials
           </NavLink>
-          <div className="bg-primary text-white flex items-center px-4 py-1 rounded-md cursor-pointer hover:bg-primary/90">
-            <img src={Telephone.src} alt="Phone Icon" className="w-5 h-5" />
-            <button className="text-white px-2 py-3 text-sm uppercase cursor-pointer">
+          <div className="bg-primary text-white flex items-center gap-2 px-4 py-3 btn-custom-rounded hover:bg-primary/90 cursor-pointer">
+            <img src={Telephone.src} alt="Phone Icon" className="w-4 h-4" />
+            <button className="text-white text-[0.8rem] uppercase cursor-pointer">
               Contact Us
             </button>
           </div>
