@@ -1,11 +1,15 @@
-// app/page.tsx
-import Hero from "@/app/components/Hero"
+import Home from "@/app/components/Home"
+import Gallery from "@/app/components/Gallery"
+import About from "@/app/components/About"
+import Testimonials from "@/app/components/Testimonials"
 
-export default function Home() {
+export default function Page() {
   return (
     <main>
-      <Hero />
-      {/* Other sections will go here */}
+      <Home />
+      <Gallery />
+      <About />
+      <Testimonials />
     </main>
   )
 }
