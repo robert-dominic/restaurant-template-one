@@ -21,3 +21,12 @@ button {
   border-top-right-radius: 15px;
   border-bottom-left-radius: 15px;
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
