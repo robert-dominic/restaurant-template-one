@@ -2,6 +2,7 @@ import "./globals.css";
 import { RootLayoutProps } from "./types";
 import Navbar from "@/app/components/Navbar"
 import WhatsAppButton from "./components/WhatAppButton";
+import Footer from "@/app/components/Footer";
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
@@ -10,6 +11,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Navbar />
         {children}
         <WhatsAppButton />
+        <Footer />
       </body>
     </html>
   );
