@@ -5,7 +5,7 @@ import HomeDish from "@/public/home/home-dish.png"
 
 export default function Home() {
   return (
-    <section id="home" className="max-w-7xl min-h-screen flex items-center justify-center gap-12 px-10 py-10 pt-20 mx-auto md:px-15">
+    <section id="home" className="max-w-7xl min-h-screen flex items-center justify-center gap-12 px-10 py-15 lg:pt-20 mx-auto md:px-15">
       <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 md:gap-15 lg:gap-24 items-center">        
         {/* Left Side - Content */}
         <div className="space-y-6 order-2 md:order-1 md:text-left">

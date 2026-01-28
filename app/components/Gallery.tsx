@@ -5,7 +5,7 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="bg-gray-100 px-6 py-22"
+      className="bg-gray-50 px-6 py-22"
     >
     <div className="max-w-7xl mx-auto">
       <div className="text-center max-w-xl mx-auto mb-16">
