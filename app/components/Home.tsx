@@ -1,7 +1,6 @@
 import Link from "next/link"
+import Image from "next/image"
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa"
-import HomeImage from "@/public/home/home-image.png"
-import HomeDish from "@/public/home/home-dish.png"
 
 export default function Home() {
   return (
@@ -14,7 +13,7 @@ export default function Home() {
           </h1>
           
           <p className="text-gray-600 text-lg max-w-md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Experience the authentic flavors of Africa, prepared with love and served with the warmth of home. Every dish tells a story.          
           </p>
           
           {/* CTA Buttons */}
@@ -46,12 +45,16 @@ export default function Home() {
         </div>
         
         {/* Right Side - Image */}
-        <div className="flex justify-center items-center pt-10 md:p-0 lg:p-10 relative order-1 md:order-2">
+        <div className="flex justify-center items-center pt-3 md:pt-8 lg:p-10 relative order-1 md:order-2">
           <div className="md:ml-10 rounded-3xl overflow-hidden z-10">
-            <img 
-              src={HomeImage.src}
+            <Image 
+              src="/home/interior-view.png"
               alt="Restaurant interior" 
-              className="md:w-[370px] w-400 h-auto object-cover"
+              width={800}
+              height={600}
+              quality={95}
+              priority
+              className="md:w-[370px] w-350 h-auto object-cover"
             />
           </div>
 
@@ -59,8 +62,11 @@ export default function Home() {
           <div className="hidden md:block absolute rounded-2xl overflow-hidden
                md:-bottom-12 md:-left-12 md:w-38 md:h-38
                lg:bottom-12 lg:-left-12 lg:w-52 lg:h-48 z-10">
-            <img
-              src={HomeDish.src}
+            <Image
+              src="/home/dish.png"
+              width={400}
+              height={400}
+              quality={95}
               alt="Special Dish"
               className="w-full h-full object-cover"
             />
