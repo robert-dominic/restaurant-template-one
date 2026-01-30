@@ -8,6 +8,7 @@ export type NavLinkProps = {
     href: string
     children: ReactNode
     isActive: boolean
+    className?: string
     onClick?: () => void
 }
 
@@ -26,4 +27,23 @@ export interface Testimonial {
   content: string
   avatar: string
   rating: number
+}
+
+export interface MenuItem {
+    id: number 
+    slug: string
+    name: string
+    description: string
+    price: number
+    category: string
+    image: string
+    ingredients?: string[]
+    allergens?: string[]
+    isVegetarian?: boolean
+    isSpicy?: boolean
+}
+
+export interface MenuCategory {
+    slug: string
+    displayName: string
 }
