@@ -34,7 +34,7 @@ export default function MobileMenu({ isOpen, activeSection, onClose }: MobileMen
           <NavLink href="/#home" isActive={activeSection === "home"} onClick={onClose}>
             Home
           </NavLink>
-          <NavLink href="/menu" isActive={pathname === "/menu"} onClick={onClose}>
+          <NavLink href="/menu" isActive={pathname.startsWith("/menu")} onClick={onClose}>
             Menu
           </NavLink>
           <NavLink href="/#gallery" isActive={activeSection === "gallery"} onClick={onClose}>

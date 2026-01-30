@@ -6,7 +6,6 @@ import { useState } from "react"
 import NavLink from "@/app/components/NavLinks"
 import MobileMenu from "@/app/components/MobileMenu"
 import { useActiveSection } from "@/app/hooks/useActiveSection"
-import Logo from "@/public/logo.svg"
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -14,15 +13,10 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="w-full bg-white fixed top-0 z-50">
+    <header className="sticky top-0 z-50 w-full bg-white md:fixed">
       <nav className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
         {/* Logo */}
-        <div className="flex items-center gap-1 cursor-pointer">
-          <img src={Logo.src} alt="Logo" className="w-[45px] h-auto" />
-          <span className="font-bold mt-2 text-gray-700 text-[1.15rem] lg:text-xl uppercase">
-            The Cozy Table
-          </span>
-        </div>
+          <span className="logo-text text-2xl font-bold">Mama's Kitchen</span>
 
         {/* Desktop Menu */}
         <ul className="font-medium mt-2 hidden md:flex items-center gap-1.5">
@@ -35,7 +29,7 @@ export default function Navbar() {
           <NavLink href="/#about" isActive={activeSection === "about"}>
             About us
           </NavLink>
-          <NavLink href="/menu" isActive={pathname === "/menu"}>
+          <NavLink href="/menu" isActive={pathname.startsWith("/menu")}>
             Menu
           </NavLink>
         </ul>

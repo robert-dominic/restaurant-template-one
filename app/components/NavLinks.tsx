@@ -5,6 +5,7 @@ export default function NavLink({
     href, 
     children, 
     isActive,
+    className,
     onClick,
    }: NavLinkProps) {
   return (
