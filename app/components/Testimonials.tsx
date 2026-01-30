@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Star } from "lucide-react"
 import { useEffect, useRef } from "react"
 import { testimonialsData } from "@/app/data/testimonialsData"
@@ -78,11 +79,13 @@ export default function Testimonials() {
                 >
                   {/* Avatar + Name/Role Row */}
                   <div className="flex items-center gap-4 mb-6">
-                    <img
-                      src={testimonial.avatar}
-                      alt={testimonial.name}
-                      className="w-16 h-16 rounded-full object-cover border-2 border-gray-100"
-                    />
+                    <Image
+                        src={testimonial.avatar}
+                        alt={testimonial.name}
+                        width={64}
+                        height={64}
+                        className="rounded-full object-cover border-2 border-gray-100"
+                      />
                     <div>
                       <h4 className="font-bold text-lg">{testimonial.name}</h4>
                       <p className="text-gray-500 text-sm">{testimonial.role}</p>
