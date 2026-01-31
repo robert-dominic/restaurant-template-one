@@ -13,7 +13,7 @@ A modern, responsive restaurant website template built with Next.js 16, TypeScri
 - **Dynamic Menu System** - Easily manage your dishes with filtering by category
 - **Featured Gallery** - Showcase your best dishes
 - **Individual Dish Pages** - Detailed pages for each menu item
-- **Optimized Performance** - Next.js Image optimization for fast loading  ⚡ 
+- **Optimized Performance** - Next.js Image optimization for fast loading
 - **SEO Ready** - Built with SEO best practices
 - **Customer Testimonials** - Social proof section
 - **About Section** - Tell your restaurant's story
