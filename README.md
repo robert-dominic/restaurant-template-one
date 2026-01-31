@@ -19,7 +19,7 @@ A modern, responsive restaurant website template built with Next.js 16, TypeScri
 - **About Section** - Tell your restaurant's story
 - **WhatsApp Integration** - Direct customer contact
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
