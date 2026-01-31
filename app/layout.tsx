@@ -1,5 +1,5 @@
 import "./globals.css";
-import { RootLayoutProps } from "./types";
+import { RootLayoutProps } from "@/app/types";
 import Navbar from "@/app/components/Navbar"
 import WhatsAppButton from "./components/WhatAppButton";
 import Footer from "@/app/components/Footer";
