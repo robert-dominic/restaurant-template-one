@@ -5,7 +5,7 @@ export default function About() {
     <section id="about" className="max-w-7xl min-h-screen flex items-center justify-center px-10 py-10 pt-20 mx-auto md:px-15">
       <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-15 lg:gap-18 items-center">
         
-        {/* Left Side - Content */}
+        {/* Content */}
         <div className="space-y-6 md:text-left">
           <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-tight">
             Welcome to Our Restaurant
@@ -23,16 +23,16 @@ export default function About() {
           </p>
         </div>
         
-        {/* Right Side - Image */}
+        {/* Image */}
         <div className="flex justify-center items-center md:pt-18 md:p-0 lg:p-10 relative">
           <div className="md:ml-10 rounded-3xl overflow-hidden z-10">
           <Image 
-            src="/menu/mains/jollof-rice.jpeg"
-            alt="Delicious meal" 
+            src="/interior-view.png"
+            alt="Restaurant interior view" 
             width={800}
             height={600}
             quality={90}
-            className="w-full md:w-[400px] h-auto object-cover"
+            className="md:w-[370px] w-350 h-auto object-cover"
           />
           </div>
         </div>
