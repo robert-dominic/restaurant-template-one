@@ -11,7 +11,7 @@ export default function MenuCard({ dish }: MenuCardProps) {
   return (
     <Link href={`/menu/${dish.slug}`}>
       <div className="bg-white rounded-2xl p-3 shadow-sm hover:shadow-md transition cursor-pointer group h-full flex flex-col">
-        {/* Image - Fixed height */}
+        {/* Image */}
         <div className="relative mb-4 overflow-hidden rounded-xl h-64 flex-shrink-0">
           <Image
             src={dish.image}
@@ -41,7 +41,7 @@ export default function MenuCard({ dish }: MenuCardProps) {
           </span>
         </div>
 
-        {/* Content - Flexible height */}
+        {/* Content */}
         <div className="flex-1 flex flex-col">
           <h3 className="font-bold text-lg mb-2">{dish.name}</h3>
           <p className="text-sm text-gray-500 line-clamp-2">{dish.description}</p>

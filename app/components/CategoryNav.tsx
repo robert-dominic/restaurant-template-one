@@ -38,7 +38,7 @@ export default function CategoryNav() {
               ))}
           </ul>
         </nav>
-        {/* Fade edge for scroll hint */}
+        {/* Faded edge */}
         <div className="absolute top-0 right-0 w-12 h-full pointer-events-none bg-gradient-to-l from-white to-transparent" />
       </div>
     </div>
