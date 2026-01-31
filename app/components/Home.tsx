@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <section id="home" className="max-w-7xl min-h-screen flex items-center justify-center gap-12 px-10 py-15 lg:pt-20 mx-auto md:px-15">
       <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 md:gap-15 lg:gap-24 items-center">        
-        {/* Left Side - Content */}
+        {/* Content */}
         <div className="space-y-6 order-2 md:order-1 md:text-left">
           <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-tight">
             We provide the best food for you
@@ -44,31 +44,17 @@ export default function Home() {
           </div>
         </div>
         
-        {/* Right Side - Image */}
+        {/* Image */}
         <div className="flex justify-center items-center pt-3 md:pt-8 lg:p-10 relative order-1 md:order-2">
-          <div className="md:ml-10 rounded-3xl overflow-hidden z-10">
+          <div className="md:ml-6 rounded-3xl overflow-hidden z-10">
             <Image 
-              src="/home/interior-view.png"
-              alt="Restaurant interior" 
+              src="/menu/mains/jollof-rice.jpeg"
+              alt="Best Dish" 
               width={800}
               height={600}
-              quality={95}
+              quality={100}
               priority
-              className="md:w-[370px] w-350 h-auto object-cover"
-            />
-          </div>
-
-          {/* Overlapping dish image */}
-          <div className="hidden md:block absolute rounded-2xl overflow-hidden
-               md:-bottom-12 md:-left-12 md:w-38 md:h-38
-               lg:bottom-12 lg:-left-12 lg:w-52 lg:h-48 z-10">
-            <Image
-              src="/home/dish.png"
-              width={400}
-              height={400}
-              quality={95}
-              alt="Special Dish"
-              className="w-full h-full object-cover"
+              className="md:w-[400px] w-350 h-auto object-cover"
             />
           </div>
         </div>
