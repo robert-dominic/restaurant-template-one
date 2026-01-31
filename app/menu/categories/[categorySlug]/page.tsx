@@ -1,10 +1,7 @@
+import type { CategoryPageProps } from "@/app/types"
 import { getDishesByCategory, getAllCategories } from "@/app/lib/menu"
 import MenuCard from "@/app/components/MenuCard"
 import { notFound } from "next/navigation"
-
-interface CategoryPageProps {
-  params: Promise<{ categorySlug: string }>
-}
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const { categorySlug } = await params

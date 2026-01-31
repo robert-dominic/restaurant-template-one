@@ -1,12 +1,9 @@
-import { getDishBySlug } from "@/app/lib/menu"
-import { notFound } from "next/navigation"
-import { ArrowLeft, Flame, Leaf } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-
-interface DishDetailProps {
-    params: Promise<{ slug: string }>
-}
+import { getDishBySlug } from "@/app/lib/menu"
+import type { DishDetailProps } from "@/app/types"
+import { notFound } from "next/navigation"
+import { ArrowLeft, Flame, Leaf } from "lucide-react"
 
 export default async function DishDetailPage({ params }: DishDetailProps) {
   const { slug } = await params
@@ -51,7 +48,7 @@ export default async function DishDetailPage({ params }: DishDetailProps) {
               </div>
             </div>
 
-            {/* Content Side */}
+            {/* Content */}
             <div className="p-8 md:p-12">
               <h1 className="text-4xl font-bold mb-4">{dish.name}</h1>
               <p className="text-3xl text-primary font-bold mb-6">${dish.price}</p>

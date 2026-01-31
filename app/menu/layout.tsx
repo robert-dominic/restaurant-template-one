@@ -1,10 +1,10 @@
 "use client"
 
-import type { ReactNode } from "react"
+import { MenuLayoutProps } from "@/app/types"
 import { usePathname } from "next/navigation"
 import CategoryNav from "@/app/components/CategoryNav"
 
-export default function MenuLayout({ children }: { children: ReactNode }) {
+export default function MenuLayout({ children }: MenuLayoutProps) {
   const pathname = usePathname()
   
   const showCategoryNav = pathname === "/menu" || pathname.startsWith("/menu/categories/")
