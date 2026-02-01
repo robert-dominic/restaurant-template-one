@@ -15,7 +15,7 @@ export default async function DishDetailPage({ params }: DishDetailProps) {
 
   return (
     <div className="min-h-screen bg-gray-50 pt-6 pb-12 md:pt-16">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto md:px-6">
         {/* Back Button */}
         <Link href="/menu" className="inline-flex items-center gap-2 text-gray-600 hover:text-primary mb-6 transition">
           <ArrowLeft size={20} />
