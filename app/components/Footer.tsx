@@ -58,7 +58,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={20} className="text-primary flex-shrink-0" />
-                <a href="mailto:info@cozytable.com" className="hover:text-primary transition">info@cozytable.com</a>
+                <a href="mailto:info@cozytable.com" className="hover:text-primary transition">info@mamakitchen.com</a>
               </li>
             </ul>
           </div>
@@ -89,7 +89,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <hr className="border-gray-800 mb-6" />
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 text-sm text-gray-400">
-          <p>&copy; {new Date().getFullYear()} The Cozy Table. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Mama's Kitchen. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-primary transition">Terms of Service</a>
             <a href="#" className="hover:text-primary transition">Privacy Policy</a>
