@@ -5,6 +5,14 @@ import WhatsAppButton from "./components/WhatAppButton";
 import Footer from "@/app/components/Footer";
 import { Albert_Sans, Montserrat_Alternates, Pacifico } from "next/font/google"
 
+export const metadata = {
+  title: "Restaurant Template",
+  description: "Modern restaurant website template",
+  icons: {
+    icon: '/icon.svg'
+  },
+}
+
 const albertSans = Albert_Sans({ 
   subsets: ["latin"], 
   display: "swap" 
