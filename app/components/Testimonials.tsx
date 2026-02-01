@@ -113,8 +113,8 @@ export default function Testimonials() {
           </div>
 
           {/* Faded edges */}
-          <div className="absolute top-0 -left-2 w-20 h-full pointer-events-none bg-gradient-to-r from-gray-50 to-transparent" />
-          <div className="absolute top-0 -right-2 w-20 h-full pointer-events-none bg-gradient-to-l from-gray-50 to-transparent" />
+          <div className="absolute top-0 -left-2 w-16 h-full pointer-events-none bg-gradient-to-r from-gray-50 to-transparent" />
+          <div className="absolute top-0 -right-2 w-16 h-full pointer-events-none bg-gradient-to-l from-gray-50 to-transparent" />
         </div>
       </div>
     </section>
